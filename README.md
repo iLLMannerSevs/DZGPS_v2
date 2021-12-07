@@ -94,4 +94,3 @@ In Leaflet APIs, the latitude will be the northing in meters, and the longitude 
 Jetelain projects powered by Arma3Map :
 
 - https://maps.plan-ops.fr/ : Prepare tactical maps, share them in real time, and import them into Arma 3 (you can host your own server using https://github.com/jetelain/Arma3TacMap)
-- https://ctab.plan-ops.fr/ : Commander tablet in real time on your mobile device. Extension of the cTab mod (https://github.com/jetelain/cTab)

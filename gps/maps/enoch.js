@@ -1,4 +1,4 @@
-﻿gps.Maps.enoch = {
+﻿dzgps.Maps.enoch = {
     CRS: MGRS_CRS(0.02735, 0.02735, 356),
     tilePattern: '/maps/enoch/{z}/{x}/{y}.png',
     maxZoom: 4,

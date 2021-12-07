@@ -10,7 +10,7 @@
     />
     <link
       rel="stylesheet"
-      href="https://illmannersevs.github.io/gps/css/mapUtils.css"
+      href="https://illmannersevs.github.io/DZGPS_v2/gps/css/mapUtils.css"
     />
   </head>
   <body style=" margin:0;padding:0;border:0;">
@@ -21,8 +21,8 @@
     ></div>
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
     <script src="https://unpkg.com/jquery@3.5.1/dist/jquery.min.js"></script>
-    <script src="https://illmannersevs.github.io/gps/js/mapUtils.js"></script>
-    <script src="https://illmannersevs.github.io/gps/maps/tanoa.js"></script>
+    <script src="https://illmannersevs.github.io/DZGPS_v2/gps/js/mapUtils.js"></script>
+    <script src="https://illmannersevs.github.io/DZGPS_v2/gps/maps/tanoa.js"></script>
     <script>
       $(function () {
         var mapInfos = gps.Maps.cherno;
@@ -36,7 +36,7 @@
 
         // Define tile layer
         L.tileLayer(
-          "https://illmannersevs.github.io/cherno_plus_tiles" + mapInfos.tilePattern,
+          "https://illmannersevs.github.io/DZGPS_v2" + mapInfos.tilePattern,
           {
             attribution: mapInfos.attribution,
             tileSize: mapInfos.tileSize,

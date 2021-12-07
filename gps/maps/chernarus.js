@@ -1,4 +1,4 @@
-gps.Maps.chernarus = {
+dzgps.Maps.chernarus = {
   CRS: MGRS_CRS(0.01575, 0.01575, 242),
   "worldName": "chernarus",
   "tilePattern": "/maps/chernarus/{z}/{x}/{y}.png",

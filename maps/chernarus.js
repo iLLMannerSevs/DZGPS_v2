@@ -13,8 +13,7 @@ dzgps.Maps.chernarus = {
   ],
   "worldSize": 15360.0,
   "preview": "https://steamuserimages-a.akamaihd.net/ugc/767236446983929084/E6866F24F7AD0E4175AE1488649161A0934D41E9/",
-  "title": "Chernarus (Autumn)",
-  "steamWorkshop": "https://steamcommunity.com/sharedfiles/filedetails/?id=583544987",
+  "title": "Chernarus",
   "cities": [
     {
       "name": "Novy Sobor",

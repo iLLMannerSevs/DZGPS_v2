@@ -1,10 +1,10 @@
 # ☣DZGPS
 
 Displays [DayZ](https://dayz.com/) maps in a web browser using [Leaflet](https://leafletjs.com/).
-*project forked from jetelain's repo for Arma3Map
+*project forked from jetelain's repo for Arma3Map | source linked at bottom of page*
 ### Supported maps
- [Chernarus+](chernarus.html)                                                        
- <a href="chernarus.html"><img src="maps/cherno/0/0/0.jpg" width="200" height="200" /></a> 
+ [Chernarus+](index.html)                                                        
+ <a href="index.html"><img src="maps/cherno/1/0/0.jpg" width="200" height="200" /></a> 
 
  [Livonia](enoch.html) (enoch)  *planned*                                                      
  <a href="enoch.html"><img src="maps/enoch/0/0/0.png" width="200" height="200" /></a>
@@ -17,7 +17,7 @@ Displays [DayZ](https://dayz.com/) maps in a web browser using [Leaflet](https:/
 ## Base map
 
 Each map has a js file that provides informations to configure Leaflet:
-`https://illmannersevs.github.io/DZGPS_v2/gps/maps/[mapname].js`
+`https://illmannersevs.github.io/DZGPS_v2/maps/{mapname}.js`
 
 ```html
 <!DOCTYPE html>
@@ -32,7 +32,7 @@ Each map has a js file that provides informations to configure Leaflet:
     />
     <link
       rel="stylesheet"
-      href="https://illmannersevs.github.io/DZGPS_v2/gps/css/mapUtils.css"
+      href="https://illmannersevs.github.io/DZGPS_v2/css/mapUtils.css"
     />
   </head>
   <body style=" margin:0;padding:0;border:0;">
@@ -43,11 +43,11 @@ Each map has a js file that provides informations to configure Leaflet:
     ></div>
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
     <script src="https://unpkg.com/jquery@3.5.1/dist/jquery.min.js"></script>
-    <script src="https://illmannersevs.github.io/DZGPS_v2/gps/js/mapUtils.js"></script>
-    <script src="https://illmannersevs.github.io/DZGPS_v2/gps/maps/cherno.js"></script>
+    <script src="https://illmannersevs.github.io/DZGPS_v2/js/mapUtils.js"></script>
+    <script src="https://illmannersevs.github.io/DZGPS_v2/maps/cherno.js"></script>
     <script>
       $(function () {
-        var mapInfos = gps.Maps.tanoa;
+        var mapInfos = DZGPS_v2.maps.cherno;
 
         // Create map control
         var map = L.map("map", {

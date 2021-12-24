@@ -1,4 +1,5 @@
 # ☣DZGPS
+![](https://dcbadge.vercel.app/api/shield/510791700139081731?theme=discord-inverted)
 
 Displays [DayZ](https://dayz.com/) maps in a web browser using [Leaflet](https://leafletjs.com/).
 *project forked from jetelain's repo for Arma3Map | source linked at bottom of page*

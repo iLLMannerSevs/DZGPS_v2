@@ -1,60 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>☣DZGPS: Chernarus+ (Cherno+) Sat+</title>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://illmannersevs.github.io/DZGPS_v2/css/mapUtils.css"
-    />
+    <title>example for leaflet-rastercoords</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1/dist/leaflet.css" />
+    <style>
+      html, body, #map {
+        width:100%;
+        height:100%;
+        margin:0;
+        padding:0;
+        background-color: #B0B0B0
+      }
+    </style>
   </head>
-  <body style=" margin:0;padding:0;border:0;">
-    <div
-      class="map"
-      id="map"
-      style="width:100%; height:100vh; margin:0;padding:0;border:0;"
-    ></div>
-    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
-    <script src="https://unpkg.com/jquery@3.5.1/dist/jquery.min.js"></script>
-    <script src="https://illmannersevs.github.io/DZGPS_v2/js/mapUtils.js"></script>
-    <script src="https://illmannersevs.github.io/DZGPS_v2/maps/cherno.js"></script>
-    <script>
-      $(function () {
-        var mapInfos = DZGPS_v2.Maps.cherno;
-
-        // Create map control
-        var map = L.map("map", {
-          minZoom: mapInfos.minZoom,
-          maxZoom: mapInfos.maxZoom,
-          crs: mapInfos.CRS,
-        });
-
-        // Define tile layer
-        L.tileLayer(
-          "https://illmannersevs.github.io/DZGPS_v2" + mapInfos.tilePattern,
-          {
-            attribution: mapInfos.attribution,
-            tileSize: mapInfos.tileSize,
-          }
-        ).addTo(map);
-
-        // Center map, and sets default zoom
-        map.setView(mapInfos.center, mapInfos.defaultZoom);
-
-        // (optional) Add grid sliders
-        L.latlngGraticule().addTo(map);
-
-        // (optional) Add a scale control
-        L.control.scale({ maxWidth: 200, imperial: false }).addTo(map);
-
-        // (optional) Add mouse grid position
-        L.control.gridMousePosition().addTo(map);
-      });
-    </script>
+  <body>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet@1/dist/leaflet.js"></script>
+    <script src="rastercoords.js"></script>
+    <script src="geojson.js"></script>
+    <script src="./maps/cherno.js"></script>
   </body>
 </html>

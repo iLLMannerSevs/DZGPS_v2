@@ -1,15 +1,23 @@
-﻿dzgps.Maps.chernarus = {
-    CRS: MGRS_CRS(0.01575, 0.01575, 242),
-    "worldName": "chernarus",
-    "tilePattern": "/maps/cherno/{z}/{x}/{y}.jpg",
+﻿function InitMap(mapInfos) {
+
+var map = DZGPS_v2.maps.cherno ('map', {
+    CRS: L.CRS.Simple}),
+  
+	var bounds = [[0, 0], [15360, 15360]];
+	var image = L.imageOverlay('./maps/tiles/0.png', bounds).addTo(map);
+  {   
+     "world"=
+       {
+    "worldName": "chernarus",  
+        "tilePattern": ".{z}/{x}/{y}.jpg",
     "maxZoom": 5,
     "minZoom": 0,
     "defaultZoom": 2,
     "attribution": "&copy; Bohemia Interactive, CUP Team",
-    "tileSize": 242,
+    "tileSize": 256,
     "center": [
-      7680,
-      7680
+      7500,
+      7500
     ],
     "worldSize": 15360.0,
     "preview": "https://steamuserimages-a.akamaihd.net/ugc/767236446983929084/E6866F24F7AD0E4175AE1488649161A0934D41E9/",
@@ -246,4 +254,4 @@
         "y": 12900.0
       }
     ]
-  };
+  }}}

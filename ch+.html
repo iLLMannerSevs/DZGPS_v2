@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>CRS.Simple example - Leaflet</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/qr.png" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+
+	 <style>
+		html, body {
+			height: 50%;
+			margin: 1px;
+		}
+		#map {
+			width: 1080px;
+			height: 1080px;
+		}
+	</style> 
+
+	
+</head>
+<body>
+
+<div id='map'></div>
+
+<script>
+
+	var map = L.map('map', {
+		crs: L.CRS.Simple,
+		maxZoom: 0,
+  		minZoom: -5,
+  		maxBounds: bounds,
+	});
+
+	var bounds = [[0, 0], [15360, 15360]];
+	var image = L.imageOverlay('./maps/cherno/map.png', bounds).addTo(map);
+
+	map.fitBounds(bounds);
+
+</script>
+
+
+
+</body>
+</html>

@@ -4,7 +4,7 @@ Displays [DayZ](https://dayz.com/) maps in a web browser using [Leaflet](https:/
 *project forked from jetelain's repo for Arma3Map | source linked at bottom of page*
 ### Supported maps
  [Chernarus+](index.html)                                                        
- <a href="index.html"><img src="maps/cherno/1/0/0.jpg" width="200" height="200" /></a> 
+ <a href="index.html"><img src="maps/cherno/map.png" width="200" height="200" /></a> 
 
  [Livonia](enoch.html) (enoch)  *planned*                                                      
  <a href="enoch.html"><img src="maps/enoch/0/0/0.png" width="200" height="200" /></a>

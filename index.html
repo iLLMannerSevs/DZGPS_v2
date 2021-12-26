@@ -49,5 +49,44 @@
 
       map.fitBounds(bounds);
     </script>
+    <script>
+      function onEachFeature(feature, layer) {
+    // does this feature have a property named popupContent?
+    if (feature.properties && feature.properties.popupContent) {
+        layer.bindPopup(feature.properties.popupContent);
+    }
+}
+
+    var geojsonFeature = [{
+      "type": "Feature",
+      "properties": {
+          "name": "Novy Sobor outskirts (Centerpoint)",
+          "amenity": "New Church",
+          "popupContent": "Novy Sobor",
+          "show_on_map": true
+      },
+      "geometry": {
+          "type": "Point",
+          "coordinates": [7500, 7500]
+      }
+  },
+  {
+      "type": "Feature",
+      "properties": {
+          "name": "Chernogorsk/Prigorodki",
+          "popupContent": "Cherno / Prigorodki",
+          "show_on_map": true
+      },
+      "geometry": {
+          "type": "Point",
+          "color": "#FF0000",
+          "coordinates": [7250, 3250]
+      }
+  }];
+  
+  L.geoJSON(geojsonFeature, {
+    onEachFeature: onEachFeature
+}).addTo(map);
+  </script>
   </body>
 </html>

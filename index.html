@@ -1,53 +1,53 @@
-
 <!DOCTYPE html>
 <html>
-<head>
-	
-	<title>☣DZGPS</title>
+  <head>
+    <title>☣DZGPS</title>
 
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
-	<link rel="shortcut icon" type="image/x-icon" href="./js/docs/images/qr.png" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./js/docs/images/qr.png"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 
+    <style>
+      html,
+      body {
+        height: 50%;
+        margin: 1px;
+      }
+      #map {
+        width: 1080px;
+        height: 1080px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
 
-	 <style>
-		html, body {
-			height: 50%;
-			margin: 1px;
-		}
-		#map {
-			width: 1080px;
-			height: 1080px;
-		}
-	</style> 
+    <script>
+      var map = L.map("map", {
+        crs: L.CRS.Simple,
+        maxZoom: 0,
+        minZoom: -5,
+        maxBounds: bounds,
+      });
 
-	
-</head>
-<body>
-
-<div id='map'></div>
-
-<script>
-
-	var map = L.map('map', {
-		crs: L.CRS.Simple,
-		maxZoom: 0,
-  		minZoom: -5,
-  		maxBounds: bounds,
-	});
-
-	var bounds = [[0, 0], [15360, 15360]];
-	var image = L.imageOverlay('./maps/cherno/map.png', bounds).addTo(map);
-
-	map.fitBounds(bounds);
-
-</script>
-
-
-
-</body>
+      var bounds = [
+        [0, 0],
+        [15360, 15360],
+      ];
+      var image = L.imageOverlay("./maps/cherno/map.png", bounds).addTo(map);
+      map.setMaxBounds(new L.LatLngBounds([0,0], [432,576])); // prevent panning beyond map image
+     // map.fitBounds(bounds); // fits the bounds to map (image previous method)
+    </script>
+  </body>
 </html>

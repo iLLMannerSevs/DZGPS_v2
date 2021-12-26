@@ -1,16 +1,16 @@
-﻿function InitMap(mapInfos) {
+﻿function InitMap() {
   // set map config
 let config = {
     minZoom: 0,
     maxZoom: 5,
   };
   // map magnification at init
-  const lat = mapInfos
-  const lng = mapInfos
+  const lat = 7500.00
+  const lng = 7500.00
   // call map
   const map = L.map("map", config).setView([lat, lng], zoom); 
     // load tile layers
-  L.tileLayer("./maps/tiles_ch/{z}/{x}/{y}.png", {attribution: '&copy; <a href="https://shadowsuspect707.wixsite.com/dayznetwork">DayZ NETWORk*</a> contributors',}).addTo(map);
+  L.tileLayer("/maps/tiles copy/{z}/{x}/{y}.png", {attribution: '&copy; <a href="https://shadowsuspect707.wixsite.com/dayznetwork">DayZ NETWORk*</a> contributors',}).addTo(map);
  
   // on drag_end update coordinates same for zoom
   map.on("dragend", updateInfo);

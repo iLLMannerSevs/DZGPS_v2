@@ -38,7 +38,9 @@
         crs: L.CRS.Simple,
         maxZoom: 0,
         minZoom: -5,
-        maxBounds: bounds,
+        // center: [0, 0],
+        // zoom: -3,
+        // maxBoundsViscosity: 1,
       });
 
       var bounds = [
@@ -46,8 +48,8 @@
         [15360, 15360],
       ];
       var image = L.imageOverlay("./maps/cherno/map.png", bounds).addTo(map);
-      map.setMaxBounds(new L.LatLngBounds([0,0], [432,576])); // prevent panning beyond map image
-     // map.fitBounds(bounds); // fits the bounds to map (image previous method)
+      // map.setMaxBounds(new L.LatLngBounds([0,0], [432,576])); // prevent panning beyond map image
+      map.fitBounds(bounds);
     </script>
   </body>
 </html>

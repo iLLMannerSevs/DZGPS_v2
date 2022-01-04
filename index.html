@@ -34,21 +34,44 @@
     <div id="map"></div>
 
     <script>
+      
       var map = L.map("map", {
         crs: L.CRS.Simple,
         maxZoom: 0,
         minZoom: -5,
         maxBounds: bounds,
+        center: [7500, -7500],
       });
 
       var bounds = [
-        [0, 0],
-        [15360, 15360],
+        [0,  15360],
+        [15360, 0],
       ];
       var image = L.imageOverlay("./maps/cherno/map.png", bounds).addTo(map);
 
       map.fitBounds(bounds);
+
+      var circle = L.circle([3550, 7350], {
+        color: 'red',
+        fillColor: '#f03',
+        fillOpacity: 0.15,
+        radius: 1500
+    }).addTo(map);
+
+      var polygon = L.polygon([
+        [7551.509, 9600.08],
+        [9451.503, 7780.06],
+        [8451.51, 8120.047]
+    ]).addTo(map);
+
+    function onMapClick(e) {
+      alert("You clicked the map at " + e.latlng);
+  }
+  
+  map.on('click', onMapClick);
+
     </script>
+
     <script>
       function onEachFeature(feature, layer) {
     // does this feature have a property named popupContent?
@@ -79,11 +102,9 @@
       },
       "geometry": {
           "type": "Point",
-          "color": "#FF0000",
           "coordinates": [7250, 3250]
       }
   }];
-  
   L.geoJSON(geojsonFeature, {
     onEachFeature: onEachFeature
 }).addTo(map);

@@ -10,7 +10,7 @@ let config = {
   // call map
   const map = L.map("map", config).setView([lat, lng], zoom); 
     // load tile layers
-  L.tileLayer("/maps/tiles copy/{z}/{x}/{y}.png", {attribution: '&copy; <a href="https://shadowsuspect707.wixsite.com/dayznetwork">DayZ NETWORk*</a> contributors',}).addTo(map);
+  L.tileLayer("./maps/chernarus/{z}/{x}/{y}.png", {attribution: '&copy; <a href="https://shadowsuspect707.wixsite.com/dayznetwork">DayZ NETWORk*</a> contributors',}).addTo(map);
  
   // on drag_end update coordinates same for zoom
   map.on("dragend", updateInfo);

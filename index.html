@@ -3,19 +3,19 @@
   <head>
     <title>☣DZGPS</title>
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8",>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0",>
 
     <link
       rel="shortcut icon"
       type="image/x-icon"
       href="./js/docs/images/qr.png"
-    />
+   ,>
 
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-    />
+   ,>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 
     <style>
@@ -44,8 +44,8 @@
       });
 
       var bounds = [
-        [0,  15360],
-        [15360, 0],
+        [0, 0],
+        [15360, 15360],
       ];
       var image = L.imageOverlay("./maps/cherno/map.png", bounds).addTo(map);
 
@@ -55,14 +55,22 @@
         color: 'red',
         fillColor: '#f03',
         fillOpacity: 0.15,
-        radius: 1500
+        radius: 1000
     }).addTo(map);
 
       var polygon = L.polygon([
-        [7551.509, 9600.08],
-        [9451.503, 7780.06],
-        [8451.51, 8120.047]
-    ]).addTo(map);
+        [3705.87, 7712.35],
+        [3513.47, 7811.51],
+        [3488.21, 7685.13],
+        [3369.66, 7702.63],
+        [3163.65, 7747.35],
+        [3117.01, 7959.26],
+        [3064.54, 8219.79],
+        [3161.71, 8272.28],
+        [3375.49, 8348.10],
+        [3577.60, 8037.03],
+        [3703.93, 7708.47]
+  ]).addTo(map);
 
     function onMapClick(e) {
       alert("You clicked the map at " + e.latlng);
@@ -71,43 +79,5 @@
   map.on('click', onMapClick);
 
     </script>
-
-    <script>
-      function onEachFeature(feature, layer) {
-    // does this feature have a property named popupContent?
-    if (feature.properties && feature.properties.popupContent) {
-        layer.bindPopup(feature.properties.popupContent);
-    }
-}
-
-    var geojsonFeature = [{
-      "type": "Feature",
-      "properties": {
-          "name": "Novy Sobor outskirts (Centerpoint)",
-          "amenity": "New Church",
-          "popupContent": "Novy Sobor",
-          "show_on_map": true
-      },
-      "geometry": {
-          "type": "Point",
-          "coordinates": [7500, 7500]
-      }
-  },
-  {
-      "type": "Feature",
-      "properties": {
-          "name": "Chernogorsk/Prigorodki",
-          "popupContent": "Cherno / Prigorodki",
-          "show_on_map": true
-      },
-      "geometry": {
-          "type": "Point",
-          "coordinates": [7250, 3250]
-      }
-  }];
-  L.geoJSON(geojsonFeature, {
-    onEachFeature: onEachFeature
-}).addTo(map);
-  </script>
   </body>
 </html>

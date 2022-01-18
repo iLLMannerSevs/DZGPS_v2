@@ -10,7 +10,7 @@ $(function () {
 
     // Define tile layer
     L.tileLayer(
-      "https://illmannersevs.github.io/DZGPS_v2" + mapInfos.tilePattern,
+      ".maps/tiles copy" + mapInfos.tilePattern,
       {
         attribution: mapInfos.attribution,
         tileSize: mapInfos.tileSize,

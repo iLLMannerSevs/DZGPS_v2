@@ -1,18 +1,18 @@
-dzgps.Maps.chernarus = {
-  CRS: MGRS_CRS(0.01575, 0.01575, 242),
+DZGPS_v2.maps.chernarus = {
+  CRS: L.CRS.Simple(0.01575, 0.01575, 242),
   "worldName": "chernarus",
   "tilePattern": "/maps/chernarus/{z}/{x}/{y}.png",
   "maxZoom": 5,
   "minZoom": 0,
   "defaultZoom": 2,
-  "attribution": "&copy; Bohemia Interactive, CUP Team",
+  "attribution": "&copy; Bohemia Interactive",
   "tileSize": 242,
   "center": [
     7680,
     7680
   ],
   "worldSize": 15360.0,
-  "preview": "https://steamuserimages-a.akamaihd.net/ugc/767236446983929084/E6866F24F7AD0E4175AE1488649161A0934D41E9/",
+  "preview": "",
   "title": "Chernarus",
   "cities": [
     {
